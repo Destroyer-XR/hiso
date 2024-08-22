@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form with Background Image</title>
+    <link rel="stylesheet" href="styles.css">
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="form-container">
+            <h1>ระบบถอน</h1>
+            <form id="bankForm">
+                <label for="name">ชื่อ-นามสกุล</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="bank-name">ธนาคาร</label>
+                <select id="bank-name" name="bank-name" required>
+                    <option value="" disabled selected>เลือกธนาคาร</option>
+                    <option value="ธนาคารกรุงเทพ">ธนาคารกรุงเทพ</option>
+                    <option value="ธนาคารกสิกรไทย">ธนาคารกสิกรไทย</option>
+                    <option value="ธนาคารไทยพาณิชย์">ธนาคารไทยพาณิชย์</option>
+                    <option value="ธนาคารกรุงไทย">ธนาคารกรุงไทย</option>
+                    <option value="ธนาคารทหารไทยธนชาต">ธนาคารทหารไทยธนชาต</option>
+                    <option value="ธนาคารกรุงศรีอยุธยา">ธนาคารกรุงศรีอยุธยา</option>
+                    <option value="ธนาคารออมสิน">ธนาคารออมสิน</option>
+                </select>
+
+                <label for="account-number">หมายเลขบัญชี</label>
+                <input type="text" id="account-number" name="account-number" required>
+
+                <label for="amount">จำนวนที่ต้องการถอน</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <button type="submit">แจ้งถอน</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
