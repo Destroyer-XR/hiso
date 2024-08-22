@@ -27,7 +27,7 @@ document.getElementById('bankForm').addEventListener('submit', function(event) {
     .sendMessages([
       {
         type: "text",
-        text: "ถอน=${amount}/${name} ${bankName} ${accountNumber}",
+        text: `ถอน=${amount}/${name} ${bankName} ${accountNumber}`,
       },
     ])
     .then(() => {
