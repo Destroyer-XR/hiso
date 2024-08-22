@@ -11,8 +11,6 @@ liff
     console.log(err.code, err.message);
   });
 
-// Using a callback
-liff.init({ liffId: "123456-abcedfg" }, successCallback, errorCallback);
 document.getElementById('bankForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
@@ -25,5 +23,17 @@ document.getElementById('bankForm').addEventListener('submit', function(event) {
     console.log('Bank Name:', bankName);
     console.log('Account Number:', accountNumber);
     console.log('Amount:', amount);
-
+    liff
+    .sendMessages([
+      {
+        type: "text",
+        text: "Hello, World!",
+      },
+    ])
+    .then(() => {
+      console.log("message sent");
+    })
+    .catch((err) => {
+      console.log("error", err);
+    });
 });
