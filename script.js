@@ -1,6 +1,6 @@
 liff
   .init({
-    liffId: "123456-abcedfg",
+    liffId: "2006065768-K3bkjBOr",
   })
   .then(() => {
     if (!liff.isLoggedIn()) {
