@@ -27,11 +27,12 @@ document.getElementById('bankForm').addEventListener('submit', function(event) {
     .sendMessages([
       {
         type: "text",
-        text: "Hello, World!",
+        text: "ถอน=${amount}/${name} ${bankName} ${accountNumber}",
       },
     ])
     .then(() => {
       console.log("message sent");
+      liff.closeWindow();
     })
     .catch((err) => {
       console.log("error", err);
