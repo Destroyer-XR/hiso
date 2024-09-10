@@ -39,6 +39,29 @@
             </form>
         </div>
     </div>
+    <script>
+        // ดึง query parameters จาก URL
+        const queryString = window.location.search;
+
+        // สร้างออบเจ็กต์ URLSearchParams เพื่อเข้าถึง query parameters
+        const urlParams = new URLSearchParams(queryString);
+
+        // ดึงค่าพารามิเตอร์ 'id'
+        const id = urlParams.get('id');
+
+        // ตรวจสอบว่าถ้า id คือ 1
+        if (id === '1') {
+            document.getElementById('homename').textContent = 'ระบบถอนบ้านโมโม่';
+        } else if (id == '2'){
+            document.getElementById('homename').textContent = 'ระบบถอนบ้านมามี้';
+        } else if (id == '3'){
+            document.getElementById('homename').textContent = 'ระบบถอนบ้านไฮโซ';
+        } else if (id == '4'){
+            document.getElementById('homename').textContent = 'ระบบถอนบ้านริชชี่';
+        } else if (id == '5'){
+            document.getElementById('homename').textContent = 'ระบบถอนบ้านดึ๋งดั่ง';
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
