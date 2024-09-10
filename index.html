@@ -39,8 +39,10 @@
             </form>
         </div>
     </div>
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
     <script>
         // ดึง query parameters จาก URL
+        var vConsole = new window.VConsole();
         const queryString = window.location.search;
 
         // สร้างออบเจ็กต์ URLSearchParams เพื่อเข้าถึง query parameters
