@@ -1,6 +1,33 @@
+let liffId = ""
+const queryString = window.location.search;
+
+// สร้างออบเจ็กต์ URLSearchParams เพื่อเข้าถึง query parameters
+const urlParams = new URLSearchParams(queryString);
+
+// ดึงค่าพารามิเตอร์ 'id'
+const id = urlParams.get('id');
+
+// ตรวจสอบว่าถ้า id คือ 1
+if (id === '1') {
+    document.getElementById('homename').textContent = 'ระบบถอนบ้านโมโม่';
+    liffId = "2006065768-K3bkjBOr"
+} else if (id == '2'){
+    document.getElementById('homename').textContent = 'ระบบถอนบ้านมามี้';
+    liffId = "2006065768-eB6qW72D"
+} else if (id == '3'){
+    document.getElementById('homename').textContent = 'ระบบถอนบ้านไฮโซ';
+    liffId = "2006065768-EGGb7Q5v"
+} else if (id == '4'){
+    document.getElementById('homename').textContent = 'ระบบถอนบ้านริชชี่';
+    liffId = "2006065768-y323P0eo"
+} else if (id == '5'){
+    document.getElementById('homename').textContent = 'ระบบถอนบ้านดึ๋งดั่ง';
+    liffId = "2006065768-W4g8Xq7R"
+}
+
 liff
   .init({
-    liffId: "2006065768-K3bkjBOr",
+    liffId: liffId,
   })
   .then(() => {
     if (!liff.isLoggedIn()) {
